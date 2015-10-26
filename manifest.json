@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Closing Browser Shortcuts",
+  "description": "This extension closes the browser when you press the 'x' key",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-2.1.4.js", "content.js"]
+    }
+  ]
+}
